@@ -44,4 +44,8 @@ public abstract class Instrument {
     public Double getSell() {
         return sell;
     }
+
+    public void setSell(double sell ){
+     this.sell = sell;
+    }
 }
