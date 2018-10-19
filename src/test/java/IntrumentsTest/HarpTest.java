@@ -12,11 +12,11 @@ public class HarpTest {
 
     @Before
     public void before(){
-        harp = new Harp(InstrumentType.STRINGS, "Wood", "Brown", "Rosebeck Lily", 200.0, 400.0,47, "Brimbrum");
+        harp = new Harp(InstrumentType.STRINGS, "Wood", "Brown", "RoseBeck Lily", 200.0, 400.0,47, "Brimbrum");
     }
 
     @Test
-    public void getinstrumentFamily(){
+    public void getInstrumentFamily(){
         assertEquals(InstrumentType.STRINGS, harp.getType());
     }
 
@@ -25,12 +25,12 @@ public class HarpTest {
         assertEquals("Wood", harp.getMaterial());
     }
     @Test
-    public void getColourofHarp(){
+    public void getColourOfHarp(){
         assertEquals("Brown", harp.getColour());
     }
     @Test
-    public void getMakeofHarp(){
-        assertEquals("Rosebeck Lily", harp.getMake());
+    public void getMakeOfHarp(){
+        assertEquals("RoseBeck Lily", harp.getMake());
     }
     @Test
     public void getCostOfHarp(){
