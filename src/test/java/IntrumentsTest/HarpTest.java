@@ -55,5 +55,15 @@ public class HarpTest {
         assertEquals("Brimbrum", harp.canPlay());
     }
 
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(2.0 , harp.calculateMarkup(),0.01);
+    }
+
+    @Test
+    public void canCalculateProfit(){
+        assertEquals(200.00, harp.calculateProfit(),0.01);
+    }
+
 }
 

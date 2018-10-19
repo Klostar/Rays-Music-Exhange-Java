@@ -2,8 +2,9 @@ package MusicShop;
 
 import MusicShop.Instruments.InstrumentType;
 import MusicShop.Instruments.Interfaces.IPlay;
+import MusicShop.Instruments.Interfaces.ISell;
 
-public abstract class Instrument implements IPlay {
+public abstract class Instrument implements IPlay, ISell {
 
     private InstrumentType type;
     private String material;
@@ -12,6 +13,7 @@ public abstract class Instrument implements IPlay {
     private Double cost;
     private Double sell;
     private String song;
+
 
     public Instrument(InstrumentType type, String material, String colour, String make, Double cost, Double sell,String song){
         this.type = type;
@@ -54,5 +56,13 @@ public abstract class Instrument implements IPlay {
 
     public String canPlay(){
         return this.song;
+    }
+
+    public double calculateMarkup(){
+     return this.sell / this.cost;
+    }
+
+    public double calculateProfit(){
+        return this.sell - this.cost;
     }
 }
