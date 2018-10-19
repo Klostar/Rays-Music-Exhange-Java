@@ -12,7 +12,7 @@ public class HarpTest {
 
     @Before
     public void before(){
-        harp = new Harp(InstrumentType.STRINGS, "Wood", "Brown", "Rosebeck Lily", 200.0, 400.0,47);
+        harp = new Harp(InstrumentType.STRINGS, "Wood", "Brown", "Rosebeck Lily", 200.0, 400.0,47, "Brimbrum");
     }
 
     @Test
@@ -33,7 +33,7 @@ public class HarpTest {
         assertEquals("Rosebeck Lily", harp.getMake());
     }
     @Test
-    public void getCostofHarp(){
+    public void getCostOfHarp(){
         assertEquals(200.0, harp.getCost(),0.01);
     }
     @Test
@@ -44,7 +44,16 @@ public class HarpTest {
     public void setSellPrice(){
         harp.setSell(300.0);
         assertEquals(300.0, harp.getSell(), 0.01);
-
     }
+    @Test
+    public void getNumberOfStrings(){
+        assertEquals(47, harp.numberOfStrings());
+    }
+
+    @Test
+    public void canPlay(){
+        assertEquals("Brimbrum", harp.canPlay());
+    }
+
 }
 
