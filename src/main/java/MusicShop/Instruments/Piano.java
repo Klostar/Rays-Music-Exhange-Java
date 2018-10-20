@@ -18,22 +18,21 @@ public class Piano extends Instrument {
         return this.numberOfBlackKeys;
     }
 
-    public int getNumberOfWhiteKeys(){
+    public int getNumberOfWhiteKeys() {
         return this.numberOfWhiteKeys;
     }
-    public int getTotalNumberOfKeys(){
+
+    public int getTotalNumberOfKeys() {
         return numberOfBlackKeys + numberOfWhiteKeys;
     }
 
-    public String getKeysMaterial(){
+    public String getKeysMaterial() {
         return this.keysMaterial;
     }
 
     public String canPlay(String song) {
         return song;
     }
-
-
 
 
 }
