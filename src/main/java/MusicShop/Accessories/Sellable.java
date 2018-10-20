@@ -1,6 +1,8 @@
 package MusicShop.Accessories;
 
-public class Sellable extends Accessory {
+import MusicShop.Instruments.Interfaces.ISell;
+
+public class Sellable extends Accessory implements ISell {
 
     public Sellable(String type, double cost, double sell) {
         super(type, cost, sell);
