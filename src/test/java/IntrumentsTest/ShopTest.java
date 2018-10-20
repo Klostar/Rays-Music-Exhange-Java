@@ -3,8 +3,14 @@ package IntrumentsTest;
 import MusicShop.Accessories.Sellable;
 import MusicShop.Accessories.SheetMusic;
 import MusicShop.Instruments.*;
+import MusicShop.Instruments.Interfaces.ISell;
 import MusicShop.Shop;
 import org.junit.Before;
+import org.junit.Test;
+
+import java.util.ArrayList;
+
+import static org.junit.Assert.assertEquals;
 
 
 public class ShopTest {
@@ -16,7 +22,7 @@ public class ShopTest {
     SheetMusic sheetMusic;
     SheetMusic sheetMusic2;
     Sellable sellable;
-    Sellable sellable2;
+
 
 
     @Before
@@ -28,7 +34,19 @@ public class ShopTest {
         sheetMusic = new SheetMusic("Sheet Music", 2.00, 10.0,"Rock");
         sheetMusic2 = new SheetMusic("Sheet Music", 2.0, 8.0, "Pop");
         sellable = new Sellable("Drum Sticks", 16.00 , 20.00);
-        sellable2 = new Sellable("Guitar Strings", 7.00, 10.00);
+
+        ArrayList<ISell> stock = new ArrayList<>();
+
+        shop = new Shop(stock);
+
     }
+
+    @Test
+    public void shopStockStartsEmpty(){
+        assertEquals(0, shop.stockCount());
+    }
+
+
+
 }
 

@@ -8,11 +8,11 @@ public class Shop {
     private ArrayList<ISell> stock;
 
     public Shop(ArrayList<ISell> stock){
-        stock = new ArrayList<>();
+        this.stock = new ArrayList<>();
     }
 
-    public ArrayList getStock(){
-        return stock;
-    }
 
+    public int stockCount() {
+        return stock.size();
+    }
 }
