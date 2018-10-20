@@ -12,7 +12,7 @@ public class HarpTest {
 
     @Before
     public void before(){
-        harp = new Harp(InstrumentType.STRINGS, "Wood", "Brown", "RoseBeck Lily", 200.0, 400.0,47, "Brimbrum");
+        harp = new Harp(InstrumentType.STRINGS, "Wood", "Brown", "RoseBeck Lily", 200.0, 400.0, "Brimbrum",47);
     }
 
     @Test
