@@ -19,4 +19,8 @@ public class Shop {
      public void addStock(ISell stock){
         this.stock.add(stock);
      }
+
+    public void sellStock(ISell stock) {
+       this.stock.remove(stock);
+    }
 }

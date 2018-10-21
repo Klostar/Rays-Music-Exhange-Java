@@ -59,6 +59,13 @@ public class ShopTest {
 
     }
 
+    @Test
+    public void canSellStock(){
+        shop.addStock(harp);
+        shop.addStock(piano);
+        shop.sellStock(piano);
+        assertEquals(1, shop.stockCount());
+    }
 
 }
 
