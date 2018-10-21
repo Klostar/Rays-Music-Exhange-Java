@@ -46,6 +46,18 @@ public class ShopTest {
         assertEquals(0, shop.stockCount());
     }
 
+    @Test
+    public void canAddItemsToShopStock(){
+        shop.addStock(harp);
+        shop.addStock(drums);
+        shop.addStock(piano);
+        shop.addStock(saxaphone);
+        shop.addStock(sheetMusic);
+        shop.addStock(sheetMusic2);
+        shop.addStock(sellable);
+        assertEquals(7, shop.stockCount());
+
+    }
 
 
 }
