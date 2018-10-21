@@ -67,5 +67,10 @@ public class ShopTest {
         assertEquals(1, shop.stockCount());
     }
 
+    @Test
+    public void canGetProfitOfOneItem() {
+        shop.addStock(piano);
+        assertEquals(3000, piano.calculateProfit(), 0.01);
+    }
 }
 

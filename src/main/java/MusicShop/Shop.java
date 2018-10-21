@@ -23,4 +23,9 @@ public class Shop {
     public void sellStock(ISell stock) {
        this.stock.remove(stock);
     }
+
+    public double getTotalProfit(ISell stock) {
+        return stock.calculateProfit();
+
+    }
 }
