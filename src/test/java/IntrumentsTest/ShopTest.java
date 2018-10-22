@@ -72,5 +72,12 @@ public class ShopTest {
         shop.addStock(piano);
         assertEquals(3000, piano.calculateProfit(), 0.01);
     }
+
+    @Test
+    public void canGetTotalProfitOfShop(){
+        shop.addStock(harp);
+        shop.addStock(drums);
+        assertEquals(350.0 , shop.getTotalProfit(),0.01);
+    }
 }
 

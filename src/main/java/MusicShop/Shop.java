@@ -24,8 +24,11 @@ public class Shop {
        this.stock.remove(stock);
     }
 
-    public double getTotalProfit(ISell stock) {
-        return stock.calculateProfit();
-
+    public double getTotalProfit() {
+       int totalProfit = 0;
+        for (ISell item : stock ) {
+         totalProfit += item.calculateProfit();
+        }
+        return totalProfit;
     }
 }
